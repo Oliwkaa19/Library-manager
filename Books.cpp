@@ -3,11 +3,6 @@
 
 using namespace std;
 
-Book::Book()
-{
-    Book::set_book();
-}
-
 
 void Book::set_book()
 {

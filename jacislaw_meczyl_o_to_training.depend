@@ -1,26 +1,26 @@
 # depslib dependency file v1.0
-1718467818 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\librarymanager.cpp
+1718564848 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\librarymanager.cpp
 	<iostream>
 	"LibraryManager.h"
 
-1718466805 c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\librarymanager.h
+1718565595 c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\librarymanager.h
 	<iostream>
 	<fstream>
 	<limits>
 
-1718468021 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\main.cpp
+1718565624 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\main.cpp
 	<iostream>
 	"LibraryManager.h"
 
-1718449859 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\librarian.cpp
+1718565595 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\librarian.cpp
 	<iostream>
 	"LibraryManager.h"
 
-1718467818 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\member.cpp
+1718565841 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\member.cpp
 	<iostream>
 	"LibraryManager.h"
 
-1718389601 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\books.cpp
+1718564848 source:c:\users\olikt\desktop\studia\semestr ii\programowanie\jacislaw_meczyl_o_to_training\books.cpp
 	<iostream>
 	"LibraryManager.h"
 

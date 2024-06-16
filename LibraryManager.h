@@ -13,12 +13,12 @@ private:
 public:
     Date();
     void set_date();
+    void get_date();
     void show_date();
     void edit_date();
     friend class Member;
     friend class Library;
     friend class Librarian;
-    friend class BorrowTransaction;
 
 };
 
@@ -34,7 +34,7 @@ public:
 public:
     Member();
     ~Member();
-    void set_member();
+    void set_member(string _member_name,string _member_surname_,int _age);
     void get_member();
     void borrow_book();
     void return_book();
@@ -49,8 +49,9 @@ private:
     string genre;
 public:
     Book();
-    void set_book();
     ~Book();
+    void set_book();
+    void get_book();
     friend class Library;
 };
 
@@ -63,11 +64,11 @@ private:
 public:
     Librarian();
     ~Librarian();
-    void add_member();
-    void remove_member();
-    void check_membership_time();
-    void check_due_time();
-    void allow_book_borrow();
+    void add_member(Member* temp_member);
+    void remove_member(Member* temp_member);
+    void check_membership_time(Member* temp_member);
+    void check_due_time(Member* temp_member);
+    void allow_book_borrow(Member* temp_member);
     friend class Library;
 };
 

@@ -12,25 +12,14 @@ int main()
 
     try
     {
-        lib1 = new Librarian();
         m1 = new Member();
-        b1 = new Book();
-    }
-    catch(const char* txtException)
-    {
-        delete m1;
-        m1 = nullptr;
-        delete b1;
-        b1 = nullptr;
-        delete lib1;
-        lib1 = nullptr;
-    }
-    try
-    {
+        lib1 = new Librarian();
+        lib1->add_member(m1);
+        l1.save_member_to_file(m1);
         l1.show_menu();
     }
     catch(const char* txtException)
     {
-        cout << "error";
+        cout << "Error";
     }
 }

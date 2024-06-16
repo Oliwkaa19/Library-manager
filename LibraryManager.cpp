@@ -3,41 +3,6 @@
 
 using namespace std;
 
-bool Library::login_librarian()
-{
-    ifstream file;
-    file.open("Librarians.txt",ios::in);
-    if(file.good()==true)
-    {
-        string login_line;
-        string password_line;
-        string login;
-        string password;
-        cout << "Login: ";
-        cin >> login;
-        cout << endl << "Password: ";
-        cin >> password;
-        getline(file,login_line);
-        getline(file,login_line);
-        while(getline(file,login_line))
-        {
-            if(login==login_line)
-            {
-                getline(file,password_line);
-                if(password==password_line)
-                {
-                    cout << endl <<"Log-in succesful"<<endl;
-                    return true;
-                    break;
-                }
-            }
-        }
-        file.close();
-        return false;
-    }
-    else{throw "Unable to open file";}
-}
-
 void Library::save_member_to_file(Member* temp_member)
 {
     ofstream file("Members.txt", ios::app);
@@ -97,6 +62,7 @@ void Library::show_menu()
         break;
     default:
         throw "No such option";
+        break;
     }
 }
 
@@ -142,6 +108,39 @@ void Library::show_member_menu()
     catch(const exception& e){cerr << "Error" << e.what() << endl;}
     }
 }
+bool Library::login_librarian()
+{
+    ifstream file;
+    file.open("Librarians.txt",ios::in);
+    if(file.good()==true)
+    {
+        string login_line;
+        string password_line;
+        string login;
+        string password;
+        cout << "Login: ";
+        cin >> login;
+        cout << endl << "Password: ";
+        cin >> password;
+        while(getline(file,login_line))
+        {
+            getline(file,login_line);
+            if(login==login_line)
+            {
+                getline(file,password_line);
+                if(password==password_line)
+                {
+                    cout << endl <<"Log-in succesful"<<endl;
+                    return true;
+                    break;
+                }
+            }
+        }
+        file.close();
+        return false;
+    }
+    else{throw "Unable to open file";}
+}
 
 bool Library::login_member()
 {
@@ -160,14 +159,14 @@ bool Library::login_member()
         string name_line;
         string surname_line;
         cout << "Name: ";
-        cin >> name;
+        cin >> _name;
         cout << endl << "Surname: ";
-        cin >> surname;
-        while(getline(_name,name_line))
+        cin >> _surname;
+        while(getline(file,name_line))
         {
             if(_name==name_line)
             {
-                getline(file,_surname_line);
+                getline(file,surname_line);
                 if(_surname==surname_line)
                 {
                     return true;
