@@ -8,13 +8,15 @@ Member::Member()
     books = 0;
 }
 
-void Member::set_member(string _member_name,string _member_surname,int _age)
+void Member::set_member(string _member_name,string _member_surname)
 {
+    int _age;
     cin >> _age;
-    if(cin.fail())
+    if(cin.fail() || _age<16 || age>120)
     {
         cin.clear();
-        throw "Invalid age";
+        cin.ignore();
+        cout << "Invalid age, can't register in library";
     }
     else
     {
@@ -23,7 +25,6 @@ void Member::set_member(string _member_name,string _member_surname,int _age)
         age = _age;
     }
 }
-
 
 void Member::borrow_book()
 {
